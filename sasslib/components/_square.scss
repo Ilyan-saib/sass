@@ -1,0 +1,45 @@
+@mixin carre($bg-color){
+
+    width: 300px;
+    height: 300px;
+    background-color: $bg-color;
+    transform: translate(100%,100%);
+}
+
+
+.square{
+@include carre(rgb(102, 27, 27))
+}
+
+
+.square:hover{
+    animation: couleur 1s infinite
+}
+ 
+   
+@keyframes couleur {
+    0%{
+        background: linear-gradient(blue, pink);
+    }
+    10%{
+        background: linear-gradient(rgba(0, 0, 255, 0.96), rgba(255, 192, 203, 0.96));
+    }
+    20%{
+        background: linear-gradient(rgba(0, 0, 255, 0.76), rgba(255, 192, 203, 0.76));
+    }
+    30%{
+        background: linear-gradient(rgba(0, 0, 255, 0.56), rgba(255, 192, 203, 0.56));
+    }
+    50%{
+        background: linear-gradient(rgba(0, 0, 255, 0.50), rgba(255, 192, 203, 0.76));
+    }
+    70%{
+        background: linear-gradient(rgba(0, 0, 255, 0.56), rgba(255, 192, 203, 0.86));
+    }
+    80%{
+        background: linear-gradient(rgba(0, 0, 255, 0.76), rgba(255, 192, 203, 0.96));
+    }
+    100%{
+        background: linear-gradient(rgba(0, 0, 255, 1), rgba(255, 192, 203,1));
+    }
+}
