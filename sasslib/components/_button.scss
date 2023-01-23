@@ -22,6 +22,9 @@ $val in $colors {
         }
     }
 
+    @xs {
+        font-size: 2px;
+    }
     .btn-outlined-#{$key} {
         @include btn(#fff);
         border: $base-border-thickness solid $val;
